@@ -1,0 +1,21 @@
+<div class="container pt-4">
+	<h1>{{title}}</h1>
+	<div class="row pt-4">
+		<div class="col">
+			<app-summary-card [storeSummary]="newCustomersCount"></app-summary-card>
+		</div>
+		<div class="col">
+			<app-summary-card [storeSummary]="activeUsersCount"></app-summary-card>
+		</div>
+		<div class="col">
+			<app-summary-card [storeSummary]="salesSum"></app-summary-card>
+		</div>
+	</div>
+	
+	<h3 class="mt-4">Top selling products</h3>
+	<div class="row">
+		<div class="col-3 pb-4" *ngFor="let product of topSellingProducts">
+			<app-product-card [product]="product"></app-product-card>
+		</div>
+	</div>
+</div>

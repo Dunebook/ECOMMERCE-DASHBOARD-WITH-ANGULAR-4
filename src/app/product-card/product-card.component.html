@@ -1,0 +1,12 @@
+<div class="card" *ngIf="product">
+	<img class="card-img-top" src="{{ product.image }}">
+	<div class="card-block">
+		<p class="card-title">
+			{{ product.name }} <span class="text-muted">($ {{ product.price}} )</span>
+		</p>
+		<p class="card-text">
+			Quantity: {{ product.quantitySold }} sold <br>
+			{{ product.commentsCount }} comments | {{ product.likesCount }} likes
+		</p>
+	</div>
+</div>
